@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>convoar</AssemblyName>
+    <RootNamespace>convoar</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="CoreJ2K" Version="2.1.2.38" />
+    <PackageReference Include="log4net" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenMetaverse"><HintPath>bin\OpenMetaverse.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverse.Rendering.Meshmerizer"><HintPath>bin\OpenMetaverse.Rendering.Meshmerizer.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverse.StructuredData"><HintPath>bin\OpenMetaverse.StructuredData.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverseTypes"><HintPath>bin\OpenMetaverseTypes.dll</HintPath></Reference>
+    <Reference Include="PrimMesher"><HintPath>bin\PrimMesher.dll</HintPath></Reference>
+    <Reference Include="Nini"><HintPath>libs\Nini.dll</HintPath></Reference>
+    <Reference Include="SmartThreadPool"><HintPath>bin\SmartThreadPool.dll</HintPath></Reference>
+    <Reference Include="Mono.Addins"><HintPath>bin\Mono.Addins.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenSim.Framework"><HintPath>bin\OpenSim.Framework.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.Framework"><HintPath>bin\OpenSim.Region.Framework.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.CoreModules"><HintPath>bin\OpenSim.Region.CoreModules.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Services.Interfaces"><HintPath>bin\OpenSim.Services.Interfaces.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Serialization"><HintPath>bin\OpenSim.Framework.Serialization.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Monitoring"><HintPath>bin\OpenSim.Framework.Monitoring.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Servers.HttpServer"><HintPath>bin\OpenSim.Framework.Servers.HttpServer.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Capabilities"><HintPath>bin\OpenSim.Capabilities.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Data.Null"><HintPath>bin\OpenSim.Data.Null.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Services.Connectors"><HintPath>bin\OpenSim.Services.Connectors.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.PhysicsModules.SharedBase"><HintPath>bin\OpenSim.Region.PhysicsModules.SharedBase.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.PhysicsModule.BasicPhysics"><HintPath>bin\OpenSim.Region.PhysicsModule.BasicPhysics.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Tests.Common"><HintPath>bin\OpenSim.Tests.Common.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="convoar\**\*.cs" />
+    <Compile Remove="convoar\Properties\AssemblyInfo.cs" />
+    <Compile Remove="convoar\obj\**\*.cs" />
+    <Compile Remove="convoar\bin\**\*.cs" />
+    <Compile Remove="convoar\ConvoarTests.cs" />
+    <Compile Remove="convoar\**\*Tests.cs" />
+    <Compile Remove="convoar\NiniShim.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Herbal3d.CommonEntities.net8.csproj" />
+    <ProjectReference Include="Herbal3d.CommonEntitiesConv.net8.csproj" />
+    <ProjectReference Include="addon-modules\HerbalCommonUtilCS\Herbal3d.CommonUtil.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Herbal3d.CommonEntitiesConv</AssemblyName>
+    <RootNamespace>org.herbal3d.cs.CommonEntitiesConv</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="CoreJ2K" Version="2.1.2.38" />
+    <PackageReference Include="log4net" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenMetaverse"><HintPath>bin\OpenMetaverse.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverse.Rendering.Meshmerizer"><HintPath>bin\OpenMetaverse.Rendering.Meshmerizer.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverse.StructuredData"><HintPath>bin\OpenMetaverse.StructuredData.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverseTypes"><HintPath>bin\OpenMetaverseTypes.dll</HintPath></Reference>
+    <Reference Include="PrimMesher"><HintPath>bin\PrimMesher.dll</HintPath></Reference>
+    <Reference Include="Nini"><HintPath>bin\Nini.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenSim.Framework"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Framework.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.Framework"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Region.Framework.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.CoreModules"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Region.CoreModules.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Services.Interfaces"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Services.Interfaces.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.PhysicsModules.SharedBase"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Region.PhysicsModules.SharedBase.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Serialization"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Framework.Serialization.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Monitoring"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Framework.Monitoring.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Framework.Servers.HttpServer"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Framework.Servers.HttpServer.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Capabilities"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Capabilities.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Data.Null"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Data.Null.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Services.Connectors"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Services.Connectors.dll</HintPath></Reference>
+    <Reference Include="OpenSim.Region.PhysicsModule.BasicPhysics"><HintPath>addon-modules\HerbalCommonEntitiesCS\libs\OpenSim.Region.PhysicsModule.BasicPhysics.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\**\*.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\Properties\AssemblyInfo.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\obj\**\*.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\bin\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Herbal3d.CommonEntities.net8.csproj" />
+    <ProjectReference Include="addon-modules\HerbalCommonUtilCS\Herbal3d.CommonUtil.csproj" />
+  </ItemGroup>
+</Project>

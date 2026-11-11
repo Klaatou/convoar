@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Herbal3d.CommonEntities</AssemblyName>
+    <RootNamespace>org.herbal3d.cs.CommonEntities</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenMetaverse"><HintPath>bin\OpenMetaverse.dll</HintPath></Reference>
+    <Reference Include="OpenMetaverseTypes"><HintPath>bin\OpenMetaverseTypes.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addon-modules\HerbalCommonEntitiesCS\CommonEntities\**\*.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntities\Properties\AssemblyInfo.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntities\obj\**\*.cs" />
+    <Compile Remove="addon-modules\HerbalCommonEntitiesCS\CommonEntities\bin\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="addon-modules\HerbalCommonUtilCS\Herbal3d.CommonUtil.csproj" />
+  </ItemGroup>
+</Project>

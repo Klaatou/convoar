@@ -130,7 +130,8 @@ namespace org.herbal3d.convoar {
             }
 
             // Base asset storage system -- 'MemAssetService' is in-memory storage
-            using (MemAssetService memAssetService = new MemAssetService()) {
+            using (MemAssetService memTarget = new MemAssetService()) {
+                IAssetService memAssetService = MemAssetServiceProxy.Create(memTarget);
 
                 // 'assetManager' is the asset cache and fetching code -- where all the mesh,
                 //    material, and instance information is stored for later processing.

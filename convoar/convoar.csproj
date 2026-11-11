@@ -1,212 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD9942A1-315C-4961-B56A-D1770BED83B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>org.herbal3d.convoar</RootNamespace>
     <AssemblyName>convoar</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.2.4.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\dist\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\dist\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Addins">
-      <HintPath>..\libs\Mono.Addins.dll</HintPath>
-    </Reference>
-    <Reference Include="Nini">
-      <HintPath>..\libs\Nini.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenMetaverse, Version=0.9.4.24465, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenMetaverse.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenMetaverse.Rendering.Meshmerizer, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenMetaverse.Rendering.Meshmerizer.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenMetaverse.StructuredData, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenMetaverse.StructuredData.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenMetaverseTypes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenMetaverseTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Capabilities">
-      <HintPath>..\bin\OpenSim.Capabilities.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Data.Null, Version=0.9.1.16355, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenSim.Data.Null.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Framework">
-      <HintPath>..\bin\OpenSim.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Framework.Monitoring">
-      <HintPath>..\bin\OpenSim.Framework.Monitoring.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Framework.Serialization">
-      <HintPath>..\bin\OpenSim.Framework.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Framework.Servers.HttpServer">
-      <HintPath>..\bin\OpenSim.Framework.Servers.HttpServer.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Region.CoreModules">
-      <HintPath>..\bin\OpenSim.Region.CoreModules.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Region.Framework">
-      <HintPath>..\bin\OpenSim.Region.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Region.PhysicsModule.BasicPhysics, Version=0.9.1.21260, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenSim.Region.PhysicsModule.BasicPhysics.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Region.PhysicsModules.SharedBase, Version=0.9.1.36086, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\OpenSim.Region.PhysicsModules.SharedBase.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Services.Connectors">
-      <HintPath>..\bin\OpenSim.Services.Connectors.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Services.Interfaces">
-      <HintPath>..\bin\OpenSim.Services.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenSim.Tests.Common">
-      <HintPath>..\bin\OpenSim.Tests.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="SmartThreadPool">
-      <HintPath>..\bin\SmartThreadPool.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="log4net" Version="3.0.0" />
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <PackageReference Include="LibreMetaverse" Version="2.6.5" />
+    <PackageReference Include="LibreMetaverse.PrimMesher" Version="2.6.5" />
+    <PackageReference Include="LibreMetaverse.StructuredData" Version="2.6.5" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <!--
+      v4 plantait en NU1605 : on pinnait CoreJ2K 1.1.1.48 et
+      Microsoft.Extensions.Configuration 8.0.0 alors que
+      LibreMetaverse 2.6.5 amène déjà CoreJ2K 2.1.2.38 et
+      Microsoft.Extensions.Configuration 9.0.11 en transitif.
+      NuGet refuse le downgrade. Donc on NE les repinne PAS ici.
+      - CoreJ2K arrive via LibreMetaverse -> CoreJ2K.Skia 2.1.2.38
+      - NiniShim.cs n'a besoin d'aucun package Microsoft.Extensions.*,
+        c'est un Dictionary en mémoire.
+      Si un jour tu as besoin de CoreJ2K en direct, mets 2.1.2.38 ou plus, jamais 1.1.1.48.
+    -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OarConverter.cs" />
-    <Compile Include="Convoar.cs" />
-    <Compile Include="ConvoarParams.cs" />
-    <Compile Include="ConvoarStats.cs" />
-    <Compile Include="ConvoarTests.cs" />
-    <Compile Include="NullUserAccountService.cs" />
-    <Compile Include="ParameterParsing.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="VersionInfo.cs" />
+    <ProjectReference Include="..\addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\Herbal3d.CommonEntitiesConv.csproj" />
+    <ProjectReference Include="..\addon-modules\HerbalCommonEntitiesCS\CommonEntities\Herbal3d.CommonEntities.csproj" />
+    <ProjectReference Include="..\addon-modules\HerbalCommonUtilCS\Herbal3d.CommonUtil.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\addon-modules\HerbalCommonEntitiesCS\CommonEntitiesConv\Herbal3d.CommonEntitiesConv.csproj">
-      <Project>{ce3d1850-0000-0000-0000-000000000000}</Project>
-      <Name>Herbal3d.CommonEntitiesConv</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\addon-modules\HerbalCommonEntitiesCS\CommonEntities\Herbal3d.CommonEntities.csproj">
-      <Project>{1267952c-0000-0000-0000-000000000000}</Project>
-      <Name>Herbal3d.CommonEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\addon-modules\HerbalCommonUtilCS\Herbal3d.CommonUtil.csproj">
-      <Project>{c0dfac61-6999-4278-855f-0e9bca2e8625}</Project>
-      <Name>Herbal3d.CommonUtil</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
