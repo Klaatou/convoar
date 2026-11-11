@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup Condition="'$(MSBuildProjectDirectory)' == '$(MSBuildThisFileDirectory)'">
+    <BaseIntermediateOutputPath>obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

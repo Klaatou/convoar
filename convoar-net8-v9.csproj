@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -47,7 +47,6 @@
     <Compile Remove="convoar\bin\**\*.cs" />
     <Compile Remove="convoar\ConvoarTests.cs" />
     <Compile Remove="convoar\**\*Tests.cs" />
-    <Compile Remove="convoar\NiniShim.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Herbal3d.CommonEntities.net8.csproj" />
